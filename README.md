@@ -10,11 +10,6 @@ Prueba  de habilidades en programacion full stack
 > 2. Rutas
 > 3. Controladores
 
-### **REACT** ⚛️
-> 1. Consumo de API
-> 2. Directivas
-> 3. Componentes
-
 ### **Extras** 🐙
 > 1. GIT
 
