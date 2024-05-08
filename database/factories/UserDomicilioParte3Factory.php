@@ -1,23 +1,25 @@
 <?php
 
 namespace Database\Factories;
-
+use Faker\Generator as Faker;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\UserDomicilio>
- */
+
+
 class UserDomicilioFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
+    
     public function definition(): array
     {
+        $user = User::factory()->create();
         return [
-            //
+            'user_id' => $user->id,
+        'domicilio' => $this->faker->address,
+        'numero_exterior' => $this->faker->buildingNumber,
+        'colonia' => $this->faker->citySuffix,
+        'cp' => $this->faker->postcode,
+        'ciudad' => $this->faker->city,
+        'fecha_nacimiento' => $this->faker->date(),
         ];
     }
 }
